@@ -1,2 +1,3 @@
 <?php
-Route::resource('/', 'ProblemsController');
+Route::get('/', ['as' => 'home', 'uses' => 'ProblemsController@index']);
+Route::resource('problems', 'ProblemsController');

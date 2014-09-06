@@ -1,0 +1,5 @@
+.btn {
+  @extend %button;
+  @include fill-parent;
+  text-align: center;
+}

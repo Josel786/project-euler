@@ -2,9 +2,9 @@
 * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/base\/extends\/_button\.scss}line{font-family:\000031}}
-button, input[type="submit"] { -webkit-font-smoothing: antialiased; background-color: #477dca; border-radius: 0.1875em; color: white; display: inline-block; font-size: 1em; font-weight: bold; line-height: 1; padding: .75em 1em; text-decoration: none; }
+button, input[type="submit"], .btn { -webkit-font-smoothing: antialiased; background-color: #477dca; border-radius: 0.1875em; color: white; display: inline-block; font-size: 1em; font-weight: bold; line-height: 1; padding: .75em 1em; text-decoration: none; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/base\/extends\/_button\.scss}line{font-family:\0000313}}
-button:hover, input[type="submit"]:hover { background-color: #2c5999; color: white; }
+button:hover, input[type="submit"]:hover, .btn:hover { background-color: #2c5999; color: white; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/base\/_typography\.scss}line{font-family:\000031}}
 body { -webkit-font-smoothing: antialiased; background-color: white; color: #333333; font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; font-size: 1em; line-height: 1.5; }
@@ -114,8 +114,33 @@ dl dd { margin: 0; }
 button, input[type="submit"] { -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; -o-appearance: none; appearance: none; border: none; cursor: pointer; user-select: none; vertical-align: middle; white-space: nowrap; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_containers\.scss}line{font-family:\000031}}
-.site-container { max-width: 68em; margin-left: auto; margin-right: auto; }
+.site-container { max-width: 60em; margin-left: auto; margin-right: auto; margin-top: 1.618em; }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/bourbon\/addons\/_clearfix\.scss}line{font-family:\0000315}}
 .site-container:after { content: ""; display: table; clear: both; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_containers\.scss}line{font-family:\000036}}
+.content-container { float: left; display: block; margin-right: 2.35765%; width: 74.41059%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/neat\/grid\/_span-columns\.scss}line{font-family:\0000338}}
+.content-container:last-child { margin-right: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_containers\.scss}line{font-family:\0000310}}
+.sidebar-container { float: left; display: block; margin-right: 2.35765%; width: 23.23176%; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/neat\/grid\/_span-columns\.scss}line{font-family:\0000338}}
+.sidebar-container:last-child { margin-right: 0; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_type\.scss}line{font-family:\000031}}
+.page-title { margin-bottom: 0.809em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_type\.scss}line{font-family:\000035}}
+.sidebar-title { margin-bottom: 0.809em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_type\.scss}line{font-family:\000039}}
+code { border: 1px solid #477dca; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_forms\.scss}line{font-family:\000031}}
+.form-group { margin-bottom: 0.809em; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/_buttons\.scss}line{font-family:\000031}}
+.btn { width: 100%; text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

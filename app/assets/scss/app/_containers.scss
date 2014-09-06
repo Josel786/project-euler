@@ -1,3 +1,12 @@
 .site-container {
   @include outer-container;
+  margin-top: $gutter;
+}
+
+.content-container {
+  @include span-columns(9);
+}
+
+.sidebar-container {
+  @include span-columns(3);
 }

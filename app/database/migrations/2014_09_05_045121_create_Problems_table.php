@@ -12,9 +12,14 @@ class CreateProblemsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('Problems', function(Blueprint $table)
+		Schema::create('problems', function(Blueprint $table)
 		{
 			$table->increments('id');
+            $table->string('number');
+            $table->string('title');
+            $table->string('description');
+            $table->text('answer');
+            $table->string('url');
 			$table->timestamps();
 		});
 	}
@@ -27,7 +32,7 @@ class CreateProblemsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('Problems');
+		Schema::drop('problems');
 	}
 
 }

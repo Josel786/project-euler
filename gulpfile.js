@@ -5,7 +5,7 @@ var sass       = require('gulp-ruby-sass');
 var paths = {
   scss: ['app/assets/scss/**/*.scss'],
   dest: 'public/css',
-  watch: ['app/Up3/**/*.php', 'app/controllers/**/*.php', 'app/models/**/*.php', 'app/views/**/*.php']
+  watch: ['app/controllers/**/*.php', 'app/models/**/*.php', 'app/views/**/*.php']
 };
 
 gulp.task('scss', function(){

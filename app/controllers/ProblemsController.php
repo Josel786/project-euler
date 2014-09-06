@@ -1,7 +1,13 @@
 <?php
 
-class ProblemsController extends \BaseController {
+class ProblemsController extends \BaseController
+{
+    private $sidebar;
 
+    public function __construct()
+    {
+        $this->sidebar = Problem::all()->toArray();
+    }
 	/**
 	 * Display a listing of the resource.
 	 * GET /problems
@@ -10,7 +16,7 @@ class ProblemsController extends \BaseController {
 	 */
 	public function index()
 	{
-        return View::make('problems.index');
+        return View::make('problems.index')->with(['items' => $this->sidebar]);
 	}
 
 	/**
@@ -21,7 +27,7 @@ class ProblemsController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		return View::make('problems.create')->with(['items' => $this->sidebar]);
 	}
 
 	/**
@@ -32,7 +38,15 @@ class ProblemsController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+        $inputs = Input::all();
+        $problem = new Problem;
+        $problem->number = str_pad($inputs['number'], 4, 0, STR_PAD_LEFT);
+        $problem->title = $inputs['title'];
+        $problem->description = $inputs['description'];
+        $problem->url = $inputs['url'];
+        $problem->save();
+
+        return Redirect::back();
 	}
 
 	/**
@@ -44,7 +58,8 @@ class ProblemsController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		//
+        $problem = Problem::find($id);
+        return View::make('problems.show', compact('problem'))->with(['items' => $this->sidebar]);
 	}
 
 	/**
