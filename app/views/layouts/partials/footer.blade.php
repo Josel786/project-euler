@@ -1,5 +1,6 @@
 <script src="{{ URL::asset('js/vendor/jquery-1.11.1.min.js') }}"></script>
 <script src="{{ URL::asset('js/plugins.js') }}"></script>
+@yield('scripts')
 <script src="{{ URL::asset('js/main.js') }}"></script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

@@ -1,5 +1,27 @@
 .btn {
   @extend %button;
-  @include fill-parent;
   text-align: center;
+}
+
+.button-group {
+  @include row;
+
+  .btn {
+    float: left;
+    border-radius: 0;
+
+    &:last-child {
+      border-top-right-radius: $base-border-radius;
+      border-bottom-right-radius: $base-border-radius;
+    }
+
+    &:first-child {
+      border-top-left-radius: $base-border-radius;
+      border-bottom-left-radius: $base-border-radius;
+    }
+  }
+
+  .btn+.btn {
+    margin-left: 1px;
+  }
 }

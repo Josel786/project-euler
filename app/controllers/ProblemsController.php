@@ -1,13 +1,20 @@
 <?php
+use Jay\Repositories\ProblemSolverRepository as Solver;
+use Jay\Repositories\CodeParserRepository as Parser;
 
 class ProblemsController extends \BaseController
 {
     private $sidebar;
+    protected $solve;
+    protected $parse;
 
-    public function __construct()
+    public function __construct(Solver $solve, Parser $parse)
     {
+        $this->solve = $solve;
         $this->sidebar = Problem::all()->toArray();
+        $this->parse = $parse;
     }
+
 	/**
 	 * Display a listing of the resource.
 	 * GET /problems
@@ -40,10 +47,11 @@ class ProblemsController extends \BaseController
 	{
         $inputs = Input::all();
         $problem = new Problem;
+        $problem->id = $inputs['number'];
         $problem->number = str_pad($inputs['number'], 4, 0, STR_PAD_LEFT);
         $problem->title = $inputs['title'];
         $problem->description = $inputs['description'];
-        $problem->url = $inputs['url'];
+        $problem->url = 'https://projecteuler.net/problem='. $inputs['number'];
         $problem->save();
 
         return Redirect::back();
@@ -58,7 +66,9 @@ class ProblemsController extends \BaseController
 	 */
 	public function show($id)
 	{
-        $problem = Problem::find($id);
+        $problem         = Problem::find($id);
+        $problem->answer = $this->solve->problem($id);
+        $problem->code   = $this->parse->problem($id);
         return View::make('problems.show', compact('problem'))->with(['items' => $this->sidebar]);
 	}
 
@@ -71,7 +81,8 @@ class ProblemsController extends \BaseController
 	 */
 	public function edit($id)
 	{
-		//
+        $problem = Problem::find($id);
+		return View::make('problems.edit', compact('problem'))->with(['items' => $this->sidebar]);
 	}
 
 	/**
@@ -83,19 +94,15 @@ class ProblemsController extends \BaseController
 	 */
 	public function update($id)
 	{
-		//
-	}
+        $problem = Problem::find($id);
+        $inputs = Input::all();
+        $problem->number = str_pad($inputs['number'], 4, 0, STR_PAD_LEFT);
+        $problem->title = $inputs['title'];
+        $problem->url = 'https://projecteuler.net/problem='. $inputs['number'];
+        $problem->description = $inputs['description'];
+        $problem->save();
 
-	/**
-	 * Remove the specified resource from storage.
-	 * DELETE /problems/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
+        return View::make('problems.show', compact('problem'))->with(['items' => $this->sidebar]);
 	}
 
 }

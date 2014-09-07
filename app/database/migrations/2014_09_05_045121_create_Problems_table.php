@@ -17,8 +17,7 @@ class CreateProblemsTable extends Migration {
 			$table->increments('id');
             $table->string('number');
             $table->string('title');
-            $table->string('description');
-            $table->text('answer');
+            $table->text('description');
             $table->string('url');
 			$table->timestamps();
 		});

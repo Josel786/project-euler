@@ -1,0 +1,13 @@
+.header {
+  @include row;
+  margin-bottom: $gutter;
+
+  h1 {
+    float: left;
+  }
+
+  .button-group {
+    float: right;
+  }
+}
+

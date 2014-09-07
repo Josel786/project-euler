@@ -1,10 +1,12 @@
-.page-title {
-  margin-bottom: $gutter / 2;
+.sidebar {
+}
+
+.sidebar-title {
 
   &.actions {
     @include row;
 
-    h1 {
+    h4 {
       float: left;
     }
 
@@ -12,8 +14,4 @@
       float: right;
     }
   }
-}
-
-.sidebar-title {
-  margin-bottom: $gutter / 2;
 }

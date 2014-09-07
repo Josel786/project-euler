@@ -8,4 +8,5 @@
 
 <link rel="stylesheet" href="{{ URL::asset('css/normalize.css') }}">
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}">
+<link rel="stylesheet" href="{{ URL::asset('css/prism.css') }}">
 <script src="{{ URL::asset('js/vendor/modernizr-2.8.0.min.js') }}"></script>

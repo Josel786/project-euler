@@ -1,6 +1,8 @@
 @extends('layouts.default')
 
 @section('scripts')
+    <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+    <script src="{{ URL::asset('js/plugins/tinymce.js') }}"></script>
 @stop
 
 @section('content')
@@ -9,10 +11,6 @@
     </div>
 
     {{ Form::open(['route' => 'problems.store']) }}
-        <div class="form-group">
-            {{ Form::label('url') }}
-            {{ Form::text('url') }}
-        </div>
         <div class="form-group">
             {{ Form::label('number') }}
             {{ Form::text('number') }}

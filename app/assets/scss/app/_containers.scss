@@ -4,9 +4,9 @@
 }
 
 .content-container {
-  @include span-columns(9);
+  @include span-columns(8);
 }
 
 .sidebar-container {
-  @include span-columns(3);
+  @include span-columns(4);
 }
