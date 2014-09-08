@@ -64,4 +64,18 @@ class ProblemSolverRepository
 
         return false;
     }
+
+    public function problem_13()
+    {
+        $numbers = \File::get('../app/Jay/Files/problem_13.txt');
+        $numbers = explode("\n", $numbers);
+        array_pop($numbers);
+        $sum = 0;
+        foreach($numbers as $number)
+            $sum = bcadd($number, $sum);
+
+        $answer = substr($sum, 0, 10);
+
+        return $answer;
+    }
 }

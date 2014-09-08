@@ -3,6 +3,8 @@
     border-bottom: 1px solid $light-gray;
     margin-bottom: $gutter;
     padding-bottom: $gutter / 2;
+    overflow-x: scroll;
+    max-height: em(300);
   }
 
   .answer {

@@ -180,8 +180,8 @@ button, input[type="submit"] { -webkit-appearance: none; -moz-appearance: none; 
 .header .button-group { float: right; }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/pages\/problems\/_show\.scss}line{font-family:\000032}}
-.problems-show .description { border-bottom: 1px solid #dddddd; margin-bottom: 1.618em; padding-bottom: 0.809em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/pages\/problems\/_show\.scss}line{font-family:\000038}}
+.problems-show .description { border-bottom: 1px solid #dddddd; margin-bottom: 1.618em; padding-bottom: 0.809em; overflow-x: scroll; max-height: 18.75em; }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/var\/folders\/0f\/2ss4dy855474fksds455zvl80000gn\/T\/gulp-ruby-sass\/app\/pages\/problems\/_show\.scss}line{font-family:\0000310}}
 .problems-show .answer { margin-bottom: 1.618em; padding-bottom: 0.809em; border-bottom: 1px solid #dddddd; }
 
 /*# sourceMappingURL=main.css.map */

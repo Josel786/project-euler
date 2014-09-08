@@ -11,7 +11,7 @@ class CodeParserRepository
 
     public function problem($id)
     {
-        $pattern = '/(?:problem_'.$id.')\(.*\)[\n\s\t]+\{([\w\s\t\d\[\]\(\)\-\/|$=<>;:+%&!*?]+)\}/';
+        $pattern = '/(?:problem_'.$id.')\(.*\)[\n\s\t]+\{([\w\s\t\d\[\]\(\)\-\/\"\'\\\|$=<>;:,.+%&!*?]+)\}/';
         preg_match($pattern, $this->file, $code);
         if($code)
             return $code[1];
